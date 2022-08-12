@@ -1,4 +1,4 @@
-import { useFetch } from "@vueuse/core";
+import { timestamp, useFetch } from "@vueuse/core";
 import { reactive, ref } from "vue";
 
 export const focusedCoordinates = ref({
@@ -9,6 +9,8 @@ export const focusedCoordinates = ref({
 export const weatherState = reactive({
   city: "",
   weatherTimeSlots: [],
+  temperatures: [],
+  dates: [],
 });
 
 export const useWeather = () => {
@@ -36,6 +38,12 @@ export const useWeather = () => {
 
     weatherState.city = weatherData.city;
     weatherState.weatherTimeSlots = weatherData.weatherTimeSlots;
+    weatherState.temperatures = data.value.list.map((timeSlot: any) => {
+      return timeSlot.main.temp;
+    });
+    weatherState.dates = data.value.list.map((timeSlot: any) => {
+      return timeSlot.dt;
+    });
 
     return data.value;
   };

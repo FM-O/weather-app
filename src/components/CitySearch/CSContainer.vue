@@ -10,9 +10,8 @@ const { fetchWeatherByCoords } = useWeather();
 </script>
 
 <template>
-  <div>
+  <div style="width: 800px">
     <CForm />
-
     {{ focusedCoordinates.lat }}
     {{ focusedCoordinates.lon }}
 
