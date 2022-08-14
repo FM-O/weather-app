@@ -11,6 +11,7 @@ export const weatherState = reactive({
   weatherTimeSlots: [],
   temperatures: [],
   dates: [],
+  series: [],
 });
 
 export const useWeather = () => {
@@ -34,18 +35,20 @@ export const useWeather = () => {
     isWeatherFetching.value = isFetching.value;
     requestError.value = error.value;
 
-    const weatherData = formatApiResponse(data.value);
+    return data.value;
+  };
+
+  const updateWeatherState = (weatherEntryData: any) => {
+    const weatherData = formatApiResponse(weatherEntryData);
 
     weatherState.city = weatherData.city;
     weatherState.weatherTimeSlots = weatherData.weatherTimeSlots;
-    weatherState.temperatures = data.value.list.map((timeSlot: any) => {
+    weatherState.temperatures = weatherEntryData.list.map((timeSlot: any) => {
       return timeSlot.main.temp;
     });
-    weatherState.dates = data.value.list.map((timeSlot: any) => {
+    weatherState.dates = weatherEntryData.list.map((timeSlot: any) => {
       return timeSlot.dt;
     });
-
-    return data.value;
   };
 
   const formatApiResponse = (inputWeatherData: any) => {
@@ -70,6 +73,7 @@ export const useWeather = () => {
 
   return {
     fetchWeatherByCoords,
+    updateWeatherState,
     requestError,
     isWeatherFetching,
   };
