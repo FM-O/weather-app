@@ -3,15 +3,17 @@ import HomeView from "@/views/HomeView.vue";
 </script>
 
 <template>
-  <header></header>
+  <header>
+    <span>Granuteo</span> <em>Get your weather anywhere, anytime</em>
+  </header>
 
   <HomeView />
 </template>
 
 <style scoped>
 header {
-  line-height: 1.5;
-  max-height: 100vh;
+  line-height: 1;
+  margin-bottom: 20px;
 }
 
 .logo {
@@ -21,7 +23,6 @@ header {
 
 nav {
   width: 100%;
-  font-size: 12px;
   text-align: center;
   margin-top: 2rem;
 }
@@ -38,8 +39,6 @@ nav a:first-of-type {
 
 @media (min-width: 1024px) {
   header {
-    display: flex;
-    place-items: center;
     padding-right: calc(var(--section-gap) / 2);
   }
 
@@ -47,10 +46,18 @@ nav a:first-of-type {
     margin: 0 2rem 0 0;
   }
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
+  header span {
+    display: block;
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 700;
+  }
+
+  header em {
+    display: block;
+    margin-top: 5px;
+    font-size: 2.2rem;
+    font-style: normal;
   }
 
   nav {

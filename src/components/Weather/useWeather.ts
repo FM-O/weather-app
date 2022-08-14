@@ -1,4 +1,4 @@
-import { timestamp, useFetch } from "@vueuse/core";
+import { useFetch } from "@vueuse/core";
 import { reactive, ref } from "vue";
 
 export const focusedCoordinates = ref({
@@ -51,12 +51,13 @@ export const useWeather = () => {
   const formatApiResponse = (inputWeatherData: any) => {
     const formattedWeatherData = inputWeatherData.list.map((timeSlot: any) => {
       return {
+        trend: timeSlot.weather[0].main,
         dt: timeSlot.dt_txt,
-        wind: `${timeSlot.wind.speed}km/h`,
+        wind: `${timeSlot.wind.speed} km/h`,
         description: timeSlot.weather[0].description,
-        temp: `${timeSlot.main.temp}C°`,
-        max_temp: `${timeSlot.main.temp_max}C°`,
-        min_temp: `${timeSlot.main.temp_min}C°`,
+        temp: `${timeSlot.main.temp} C°`,
+        max_temp: `${timeSlot.main.temp_max} C°`,
+        min_temp: `${timeSlot.main.temp_min} C°`,
         humidity: `${timeSlot.main.humidity}%`,
       };
     });

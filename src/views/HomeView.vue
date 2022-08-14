@@ -4,7 +4,7 @@ import WContainer from "@/components/Weather/WContainer.vue";
 </script>
 
 <template>
-  <main style="padding: 60px 0">
+  <main>
     <CSContainer />
     <WContainer />
   </main>
