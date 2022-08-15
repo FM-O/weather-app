@@ -29,7 +29,7 @@ export const useWeather = () => {
     } = focusedCoordinates.value
   ) => {
     const { isFetching, error, data } = await useFetch(
-      `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=9ca60a667e3c849942c2b0261f7aa955`
+      `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=9ca60a667e3c849942c2b0261f7aa955`
     ).json();
 
     isWeatherFetching.value = isFetching.value;

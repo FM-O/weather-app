@@ -72,7 +72,7 @@ const searchCity = useDebounceFn(async () => {
   if (city.value.length <= 2) return;
 
   const { isFetching, error, data } = await useFetch(
-    `http://api.openweathermap.org/geo/1.0/direct?q=${city.value}&limit=5&appid=9ca60a667e3c849942c2b0261f7aa955`
+    `https://api.openweathermap.org/geo/1.0/direct?q=${city.value}&limit=5&appid=9ca60a667e3c849942c2b0261f7aa955`
   ).json();
 
   isLoading.value = isFetching.value;
