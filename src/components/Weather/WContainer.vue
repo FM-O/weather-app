@@ -2,7 +2,8 @@
 import { weatherState } from "@/components/Weather/useWeather";
 import { reactive, ref, watch } from "vue";
 import VueHighcharts from "vue3-highcharts";
-import Highcharts, { seriesType } from "Highcharts";
+import * as Highcharts from "highcharts";
+
 import {
   focusedCoordinates,
   useWeather,

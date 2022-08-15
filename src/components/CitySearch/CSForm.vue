@@ -2,7 +2,7 @@
 import { ref } from "vue";
 import { useDebounceFn, useFetch } from "@vueuse/core";
 
-import Highcharts from "highcharts";
+import * as Highcharts from "highcharts";
 
 import {
   focusedCoordinates,

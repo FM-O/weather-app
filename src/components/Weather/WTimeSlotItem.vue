@@ -5,7 +5,7 @@ import CloudyIcon from "@/components/assets/CloudyIcon.vue";
 import WindIcon from "@/components/assets/WindIcon.vue";
 import HumidityIcon from "@/components/assets/HumidityIcon.vue";
 
-import Highcharts from "Highcharts";
+import Highcharts from "highcharts";
 
 import { computed } from "vue";
 const props = defineProps({
