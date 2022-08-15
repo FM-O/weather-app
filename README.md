@@ -1,6 +1,17 @@
 # weather-app
 
-This template should help get you started developing with Vue 3 in Vite.
+
+## Developer's word
+As it is an entry, many improvements can be done within the app. Some of the following can be listed:
+
+- More precise types with TS
+- Don't add a curve of a city that is already represented
+- Create a city composable to share state
+- More separations between domain entities (weather in city feature)
+
+One of the extra feature has not been done because of the timing
+
+*To launch the app you can follow the default vue3 init steps below*
 
 ## Recommended IDE Setup
 

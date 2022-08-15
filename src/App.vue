@@ -12,7 +12,8 @@ const cityStore = useCityStore();
     </div>
     <div v-if="cityStore.selectedCity" class="selected-app-city">
       Currently selected city:
-      {{ cityStore.selectedCity.name }}
+      {{ cityStore.selectedCity.name }}, {{ cityStore.selectedCity.country }},
+      {{ cityStore.selectedCity.state }}
     </div>
   </header>
 

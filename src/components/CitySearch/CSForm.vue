@@ -143,7 +143,9 @@ const addToSeries = async (city: Tcity) => {
           </li>
         </ul>
       </div>
-      <div v-if="errorInComponent" class="error">No city found</div>
+      <div v-if="errorInComponent || !cityList.length" class="error">
+        No city found
+      </div>
     </form>
   </div>
 </template>
