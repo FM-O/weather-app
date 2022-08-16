@@ -107,7 +107,7 @@ const addToSeries = async (city: Tcity) => {
 <template>
   <div class="cs-form">
     <h2>Search a city from which display the weather:</h2>
-    <form>
+    <form @submit.prevent>
       <input
         type="text"
         name="city"
