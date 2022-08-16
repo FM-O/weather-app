@@ -30,7 +30,7 @@ header {
 }
 
 header .selected-app-city {
-  color: whitesmoke;
+  color: var(--color-text);
   font-size: 2.4rem;
 }
 

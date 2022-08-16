@@ -67,7 +67,7 @@ const formatDate = (date: string) => {
 .w-item {
   border: 2px solid #cee32d;
   padding: 1rem;
-  color: whitesmoke;
+  color: var(--color-text);
 }
 
 .w-item-date {

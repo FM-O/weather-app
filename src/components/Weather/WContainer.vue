@@ -17,7 +17,7 @@ const displayChart = ref(false);
 const chartOptions = reactive({
   title: {
     text: "Temperatures evolution within the 5 days",
-    style: { color: "#ffffff" },
+    style: { color: "var(--color-text)" },
   },
   colors: [
     "#cee32d",
@@ -32,10 +32,10 @@ const chartOptions = reactive({
     "#a6c96a",
   ],
   chart: {
-    backgroundColor: "#181818",
+    backgroundColor: "var(--color-background)",
   },
   legend: {
-    itemStyle: { color: "#ffffff" },
+    itemStyle: { color: "var(--color-text)" },
     itemHoverStyle: { color: "#cee32d" },
   },
   xAxis: {
@@ -46,20 +46,20 @@ const chartOptions = reactive({
       year: "%b",
     },
     labels: {
-      style: { color: "#ffffff" },
+      style: { color: "var(--color-text)" },
     },
     title: {
       text: "Date",
-      style: { color: "#ffffff" },
+      style: { color: "var(--color-text)" },
     },
   },
   yAxis: {
     labels: {
-      style: { color: "#ffffff" },
+      style: { color: "var(--color-text)" },
     },
     title: {
       text: "temperatures (celsius)",
-      style: { color: "#ffffff" },
+      style: { color: "var(--color-text)" },
     },
   },
   series: weatherState.series,
@@ -129,7 +129,11 @@ const getWeatherForCity = async () => {
     >
       Get weather (currently selected city)
     </button>
-    <VueHighcharts v-if="displayChart" :options="chartOptions" />
+    <VueHighcharts
+      class="w-highcharts"
+      v-if="displayChart"
+      :options="chartOptions"
+    />
     <WTimeSlotList />
   </div>
 </template>
@@ -138,13 +142,18 @@ const getWeatherForCity = async () => {
 .w-container {
   margin-top: 2rem;
 }
+
+.w-highcharts {
+  margin-top: 1.5rem;
+}
+
 .w-container button {
   border: 2px solid #cee32d;
   background-color: transparent;
   padding: 1rem 2rem;
 
   cursor: pointer;
-  color: whitesmoke;
+  color: var(--color-text);
 }
 
 .w-container button:hover {

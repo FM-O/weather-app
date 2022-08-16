@@ -164,13 +164,13 @@ const addToSeries = async (city: Tcity) => {
 
   min-width: 200px;
   font-size: 1.4rem;
-  color: whitesmoke;
+  color: var(--color-text);
 }
 
 .cs-cities-searched {
+  border: 2px solid #cee32d;
   margin-top: 1rem;
-  background-color: white;
-  color: #2c2c2c;
+  color: var(--color-text);
 }
 
 .cs-cities-searched h3 {
@@ -196,6 +196,7 @@ const addToSeries = async (city: Tcity) => {
 
 .cs-cities-searched ul li:hover {
   background-color: #cee32d;
+  color: #2c2c2c;
 }
 
 .city-add {
