@@ -39,7 +39,7 @@ const formatDate = (date: string) => {
 </script>
 
 <template>
-  <div class="w-item">
+  <div class="w-item" data-cy="timeslot">
     <div class="w-item-date">
       {{ formatDate(weather.dt) }}
     </div>

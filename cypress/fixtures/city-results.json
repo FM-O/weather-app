@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Lyon",
+    "local_names": {
+      "lt": "Lionas",
+      "fr": "Lyon",
+      "la": "Lugdunum",
+      "mk": "Лион",
+      "bg": "Лион",
+      "hu": "Lyon",
+      "gl": "Lión",
+      "ja": "リヨン",
+      "zh": "里昂",
+      "ru": "Лион",
+      "br": "Lyon",
+      "el": "Λυών",
+      "kn": "ಲ್ಯೊ",
+      "uk": "Ліон",
+      "be": "Ліён",
+      "oc": "Lion",
+      "pt": "Lião",
+      "eo": "Liono",
+      "ar": "ليون",
+      "ca": "Lió",
+      "sr": "Лион",
+      "it": "Lione",
+      "lv": "Liona",
+      "en": "Lyon",
+      "ko": "리옹"
+    },
+    "lat": 45.7578137,
+    "lon": 4.8320114,
+    "country": "FR",
+    "state": "Auvergne-Rhône-Alpes"
+  },
+  {
+    "name": "Lyon",
+    "local_names": {
+      "gl": "Lión",
+      "ar": "ليون",
+      "fr": "Lyon"
+    },
+    "lat": 45.6963425,
+    "lon": 4.735948029916814,
+    "country": "FR",
+    "state": "Auvergne-Rhône-Alpes"
+  },
+  {
+    "name": "Lyon",
+    "lat": 34.2178865,
+    "lon": -90.5420429,
+    "country": "US",
+    "state": "Mississippi"
+  },
+  {
+    "name": "Lyon",
+    "lat": 38.5117175,
+    "lon": -91.1740394,
+    "country": "US",
+    "state": "Missouri"
+  }
+]

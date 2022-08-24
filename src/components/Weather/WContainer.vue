@@ -124,6 +124,7 @@ const getWeatherForCity = async () => {
 <template>
   <div class="w-container">
     <button
+      data-cy="get-weather-button"
       v-if="focusedCoordinates.lat && focusedCoordinates.lon"
       @click="getWeatherForCity()"
     >

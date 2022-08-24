@@ -4,7 +4,7 @@ import { weatherState } from "@/components/Weather/useWeather";
 </script>
 
 <template>
-  <div class="w-timeslot-list">
+  <div class="w-timeslot-list" data-cy="weather-timeslots-container">
     <WTimeSlotItem
       v-for="(timeSlot, index) in weatherState.weatherTimeSlots"
       :key="index"
