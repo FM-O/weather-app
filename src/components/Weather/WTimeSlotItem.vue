@@ -34,7 +34,7 @@ const formatDate = (date: string) => {
   const time = new Highcharts.Time({});
   const timestamp = Date.parse(date);
 
-  return time.dateFormat("%A %b %H:%M:%S", timestamp);
+  return isNaN(timestamp) ? date : time.dateFormat("%A %b %H:%M:%S", timestamp);
 };
 </script>
 
